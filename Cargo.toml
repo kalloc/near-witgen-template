@@ -1,0 +1,26 @@
+[package]
+name = "witgen-template"
+version = "0.1.0"
+authors = ["Niktia Kuznetsov <n@8gen.team>"]
+edition = "2018"
+
+[dependencies]
+near-sdk = "4.0.0-pre.9"
+near-contract-standards = "4.0.0-pre.9"
+serde_json = "1"
+borsh = "0.9.3"
+serde = "1"
+witgen = { path = "./dummy_witgen" }  
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[profile.release]
+codegen-units = 1
+# Tell `rustc` to optimize for small code size.
+opt-level = "z"
+lto = true
+debug = false
+panic = "abort"
+overflow-checks = true
+

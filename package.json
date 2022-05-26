@@ -1,0 +1,17 @@
+{
+  "name": "near-witgen-template",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "build:contract": "./build.sh",
+    "build:all": "yarn build:contract && yarn witme:witgen && yarn witme:ts",
+    "witme:witgen": "witme near wit -d . -o ts/contract.wit",
+    "witme:ts": "witme near ts -i ts/contract.wit -o ts/contract"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "author": "kalloc",
+  "license": "MIT"
+}
