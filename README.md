@@ -3,7 +3,7 @@
 ### Install witme
 
 ```bash
-cargo install witme --version 0.2.4
+cargo install witme --version 0.2.6
 ```
 
 ### build example
