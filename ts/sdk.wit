@@ -1,6 +1,3 @@
-// This is a generated file by witgen (https://github.com/bnjjj/witgen), please do not edit yourself, you can generate a new one thanks to cargo witgen generate command. (cargo-witgen v0.12.0) 
-
-
 // This is a generated file by witgen (https://github.com/bnjjj/witgen), please do not edit yourself, you can generate a new one thanks to cargo witgen generate command. (witme v0.2.0) 
 
 ///  StorageUsage is used to count the amount of storage used by a contract.
@@ -41,16 +38,3 @@ type public-key = string
 ///  Raw type for timestamp in nanoseconds
 type timestamp = u64
 
-
-
-record config {
-    version: string,
-    value: string
-}
-
-///  change
-init: function()
-config: function() -> config
-
-///  change
-update-config: function(value: string) -> config

@@ -1,2 +1,4 @@
 target
 res/*.wasm
+neardev/
+node_modules/

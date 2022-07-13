@@ -5,12 +5,18 @@
   "scripts": {
     "build:contract": "./build.sh",
     "build:all": "yarn build:contract && yarn witme:witgen && yarn witme:ts",
-    "witme:witgen": "witme near wit -d . -o ts/contract.wit",
-    "witme:ts": "witme near ts -i ts/contract.wit -o ts/contract"
+    "witme:witgen": "witme near wit -d . -p ts/sdk.wit -o ts/contract.wit",
+    "witme:ts": "witme near ts -i ts/contract.wit -o ts/contract",
+    "deploy": "./dev-deploy.sh",
+    "test": "near repl -s ./test.ts"
   },
   "dependencies": {
+    "ts-node": "^10.8.2",
+    "typescript": "^4.7.4"
   },
   "devDependencies": {
+    "near-api-js": "^0.45.1",
+    "near-cli": "^3.4.0"
   },
   "author": "kalloc",
   "license": "MIT"
