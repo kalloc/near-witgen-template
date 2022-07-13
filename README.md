@@ -20,7 +20,7 @@ yarn run deploy && yarn run test
 Expected result:
 
 ```
-yarn run deploy test
+y@sweet ~/learn/near/witgen-template[master] $ yarn run deploy test
 yarn run v1.22.18
 $ ./dev-deploy.sh test
     Finished release [optimized] target(s) in 0.03s
@@ -48,8 +48,9 @@ Done in 4.99s.
 ## Example 
 
 ```typescript
-import { Context } from "near-cli/context";
 import fs from "fs";
+import { Context } from "near-cli/context";
+
 import { Contract } from "./ts/contract";
 
 
